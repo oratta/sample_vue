@@ -1,11 +1,22 @@
 <template>
+    <form>
+        <label for="name">氏名: </label>
+        <input type="text" id="name"
+               v-on:keyup.esc="clear()"
+               v-model="name" />
+    </form>
 </template>
 
 <script>
     export default {
         name: 'HelloWorld',
-        props: {
-            msg: String
+        data: ()=>({
+            name: '匿名'
+        }),
+        methods: {
+            clear: function(){
+                this.name = "";
+            }
         }
     }
 </script>
