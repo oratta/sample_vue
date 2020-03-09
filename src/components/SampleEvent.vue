@@ -3,6 +3,7 @@
         <label for="name">氏名: </label>
         <input type="text" id="name"
                v-on:keyup.esc="clear()"
+               v-on:keyup.ctrl.81="help"
                v-model="name" />
     </form>
 </template>
@@ -16,6 +17,9 @@
         methods: {
             clear: function(){
                 this.name = "";
+            },
+            help: function(){
+                window.alert('氏名を漢字で入力してください')
             }
         }
     }
