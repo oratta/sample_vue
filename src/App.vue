@@ -4,6 +4,10 @@
     <SampleEvent></SampleEvent>
     <SampleSlot>親です</SampleSlot>
     <SampleSlot></SampleSlot>
+    <div class="sample_component">
+      <SampleComponent v-model="message"></SampleComponent>
+      <p>入力値: {{message}}</p>
+    </div>
   </div>
 </template>
 
@@ -11,6 +15,7 @@
 import SampleEvent from './components/SampleEvent.vue';
 import SampleSlot from './components/SampleSlot.vue';
 import SampleSwitchComponent from './components/SampleSwitchComponent.vue';
+import SampleComponent from './components/SampleComponent.vue';
 
 export default {
   name: 'App',
@@ -18,12 +23,15 @@ export default {
     SampleEvent,
     SampleSlot,
     SampleSwitchComponent,
+    SampleComponent,
   },
   data: ()=>({
     current: 0,
-    components: ['Member', 'New', 'Env']
+    components: ['Member', 'New', 'Env'],
+    message: 'default'
   }),
   computed: {
+
     currentBanner: function() {
       return 'Banner' + this.components[this.current];
     }
