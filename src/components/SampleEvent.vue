@@ -21,7 +21,6 @@
 
 <script>
     export default {
-        name: 'HelloWorld',
         data: ()=>({
             name: '匿名',
             showMenu: false,

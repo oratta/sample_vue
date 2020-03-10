@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <SampleEvent></SampleEvent>
+    <SampleSlot>親です</SampleSlot>
+    <SampleSlot></SampleSlot>
   </div>
 </template>
 
 <script>
-import SampleEvent from './components/SampleEvent.vue'
+import SampleEvent from './components/SampleEvent.vue';
+import SampleSlot from './components/SampleSlot.vue';
 
 export default {
   name: 'App',
   components: {
-    SampleEvent
+    SampleEvent,
+    SampleSlot
   }
 }
 </script>
