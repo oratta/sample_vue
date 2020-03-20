@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Article from '../views/Article.vue'
+import Page from '../views/Page.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,14 @@ const routes = [
     name: 'article',
     component: Article,
     props: true,
+    children: [
+      {
+        path: 'pages/:page_num',
+        name: 'page',
+        component: Page,
+        props: true,
+      }
+    ]
   }
 ]
 

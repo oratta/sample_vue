@@ -7,6 +7,8 @@
       <router-link to="/article/225">記事No.225</router-link>
     </div>
     <router-view/>
+    <router-view name="main"/>
+    <router-view name="sub" />
   </div>
 </template>
 
