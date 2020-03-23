@@ -1,6 +1,7 @@
 <template>
     <div>
         <div>記事コード : {{ aid }}</div>
+        <div>記事コード from router params : {{ paramAid }}</div>
         <span>
             <router-link v-bind:to="'/article/'+ aid + '/pages/1'" >
                 Page: 1
@@ -47,6 +48,19 @@ export default{
     beforeRouteUpdate: timeGuard,
     props: {
         aid: String
+    },
+    data() {
+        return {
+            paramAid: 0,
+        }
+    },
+    created() {
+        this.paramAid = this.$route.params.aid;
+    },
+    watch: {
+        '$route'(to, from){
+            this.paramAid = to.params.aid;
+        }
     }
 }
 </script>
