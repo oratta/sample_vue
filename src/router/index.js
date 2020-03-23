@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Article from '../views/Article.vue'
 import Page from '../views/Page.vue'
+import VuexSample from '../views/VuexSample.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
         props: true,
       }
     ]
+  },
+  {
+    path: '/vuex',
+    name: 'vuex',
+    component: VuexSample,
   }
 ]
 

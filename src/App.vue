@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/" exact>Home</router-link> |
       <router-link to="/about" active-class="current" tag="button" event="mouseover">About</router-link>|
+      <router-link to="/vuex">Vuex</router-link>
       <router-link to="/article/188">記事No.188</router-link>|
       <router-link to="/article/225">記事No.225</router-link>|
       <router-link to="/article/13">記事No.13</router-link>|
