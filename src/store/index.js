@@ -1,10 +1,16 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import SampleMainModule from './main-sample';
+import SampleSubModule from './sub-sample';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: true,
+  modules: {
+    main: SampleMainModule,
+    sub: SampleSubModule,
+  },
   state: {
     count: 0,
     books: [
@@ -48,6 +54,4 @@ export default new Vuex.Store({
   },
   actions: {
   },
-  modules: {
-  }
 })

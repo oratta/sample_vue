@@ -8,6 +8,12 @@
             <input type="button" value="+" v-on:click="plus" />
         </div>
 
+        <div class="module">
+            メイン : {{mainUpdated}} <br />
+            サブ : {{subUpdated}} <br />
+            <input type="button" value="更新" v-on:click="setUpdated" />
+        </div>
+
     </div>
 </template>
 
@@ -17,6 +23,12 @@ export default {
     computed: {
         count : function(){
             return this.$store.state.count;
+        },
+        mainUpdated: function(){
+            return this.$store.state.main.updated;
+        },
+        subUpdated: function(){
+            return this.$store.state.sub.updated;
         }
     },
     methods: {
@@ -25,6 +37,9 @@ export default {
         },
         plus: function(){
             this.$store.commit('plus');
+        },
+        setUpdated: function(){
+            this.$store.commit('setUpdated')
         }
     }
 }
