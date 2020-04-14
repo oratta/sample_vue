@@ -6,14 +6,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   name: 'Home',
   components: {
   },
   computed: {
-    count: function(){
-      return this.$store.state.count;
-    }
-  }
+    ...mapState(['count']),
+  },
 }
 </script>
