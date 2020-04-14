@@ -42,9 +42,10 @@ const routes = [
     component: VuexSample,
   },
   {
-    path: '/book',
+    path: '/book/:max_price',
     name: 'book',
     component: Book,
+    props: true,
   }
 ]
 

@@ -4,7 +4,7 @@
             <h2>Books counter</h2>
             <p>書籍数 : {{booksCount}}</p>
             <ul>
-                <li v-for="b of getBooksByPrice(2500)" v-bind:key="b.isbn">
+                <li v-for="b of getBooksByPrice(max_price)" v-bind:key="b.isbn">
                     {{b.title}} ({{b.price}}円)<br />
                     ISBN : {{b.isbn}}
                 </li>
@@ -46,6 +46,13 @@ export default {
             })
         }
     },
-    computed: mapGetters(['booksCount', 'getBooksByPrice'])
+    computed: {
+        ...mapGetters(['booksCount', 'getBooksByPrice']),
+
+
+    },
+    props: {
+        max_price: String,
+    }
 }
 </script>
