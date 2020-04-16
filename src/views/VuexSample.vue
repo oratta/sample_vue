@@ -25,7 +25,7 @@ export default {
             return this.$store.state.count;
         },
         mainUpdated: function(){
-            return this.$store.state.main.updated;
+            return this.$store.state.mainmain.updated;
         },
         subUpdated: function(){
             return this.$store.state.sub.updated;
@@ -39,7 +39,8 @@ export default {
             this.$store.commit('plus');
         },
         setUpdated: function(){
-            this.$store.commit('setUpdated')
+            this.$store.commit('mainmain/setUpdated');
+            this.$store.commit('sub/setUpdated')
         }
     }
 }
